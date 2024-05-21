@@ -1,6 +1,3 @@
-
-// BUl page home-diki
-
 import 'package:flutter/material.dart';
 
 class TopScreen extends StatefulWidget {
@@ -15,6 +12,8 @@ class _TopScreenState extends State<TopScreen> {
       backgroundColor: Color(0xFF7F7FCA),
       appBar: AppBar(
         title: Text('Top'),
+        // Убираем кнопку "назад"
+        automaticallyImplyLeading: false,
       ),
       body: Center(
         child: Text('Top Screen Content'),

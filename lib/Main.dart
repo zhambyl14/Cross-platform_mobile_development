@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:namer_app/first_page.dart';
 import 'package:provider/provider.dart';
-
 import 'home_screen.dart';
 import 'user_screen.dart';
 import 'top_screen.dart';
@@ -14,8 +14,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
+      
       create: (context) => MyAppState(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Puzzle Escape',
         theme: ThemeData(
           scaffoldBackgroundColor: Color(0xFF7F7FCA),
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
             showUnselectedLabels: true, // Show labels for unselected tabs
           ),
         ),
-        home: MyHomePage(),
+        home: FirstPage(),
       ),
     );
   }
@@ -40,6 +42,10 @@ class MyApp extends StatelessWidget {
 class MyAppState extends ChangeNotifier {}
 
 class MyHomePage extends StatefulWidget {
+  final String username;
+  
+  MyHomePage({required this.username});
+
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -47,15 +53,15 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
 
-  final List<Widget> _pages = [
-    TopScreen(),
-    UserScreen(),
-    HomeScreen(),
-    SettingsScreen(),
-  ];
-
   @override
   Widget build(BuildContext context) {
+    final List<Widget> _pages = [
+      TopScreen(),
+      UserScreen(username: widget.username), // Pass the username here
+      HomeScreen(),
+      SettingsScreen(),
+    ];
+
     return Scaffold(
       body: _pages[_selectedIndex],
       bottomNavigationBar: Stack(
@@ -63,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBar(
             items: [
               BottomNavigationBarItem(
-                icon:  Image.asset(
+                icon: Image.asset(
                   'assets/profile.png',
                   height: 30,
                   width: 30,
@@ -78,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 label: 'User',
               ),
-               BottomNavigationBarItem(
+              BottomNavigationBarItem(
                 icon: Image.asset(
                   'assets/main.png',
                   height: 30,
@@ -86,7 +92,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 label: 'Home',
               ),
-              
               BottomNavigationBarItem(
                 icon: Image.asset(
                   'assets/set.png',

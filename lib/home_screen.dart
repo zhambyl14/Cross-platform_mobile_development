@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
       children: [
         Text(
           'Player', // Текст "Player"
-          style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, fontFamily: 'Inknut Antiqua'),
+          style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, fontFamily: 'Times New Roman'),
         ),
         ElevatedButton(
           onPressed: () {
@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Image.asset('assets/Group.png', height: 30, width: 30), // Иконка
                 SizedBox(height:0), // Добавьте немного пространства между иконкой и текстом
-                Text('50', style: TextStyle(color: Colors.black, fontFamily: "Inknut Antiqua", fontSize: 10)), // Текст
+                Text('50', style: TextStyle(color: Colors.black, fontFamily: 'Times New Roman', fontSize: 10)), // Текст
               ],
             ),
           ),
@@ -68,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
   children: [
     Text(
       '50', // Текст "Player"
-      style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, fontFamily: 'Inknut Antiqua'),
+      style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, fontFamily: 'Times New Roman'),
     ),
     SizedBox(width: 5.0),
     Image.asset('assets/tiyn.png', height: 24, width: 24),
@@ -94,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Image.asset('assets/sandyq.png', height: 30, width: 30), // Иконка
                 SizedBox(height: 0), // Добавьте немного пространства между иконкой и текстом
-                Text('CLAIM', style: TextStyle(color: Colors.black, fontFamily: "Inknut Antiqua", fontSize: 10)), // Текст
+                Text('CLAIM', style: TextStyle(color: Colors.black, fontFamily: "'Times New Roman'", fontSize: 10)), // Текст
               ],
             ),
           ),
@@ -108,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Center(
                 child: Text(
                   'Puzzle\nEscape', // Replace with user's name
-                  style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold, fontFamily: "Inknut Antiqua"),
+                  style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold, fontFamily: "'Times New Roman'"),
                 ),
               ),
               SizedBox(height: 16.0),
@@ -132,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisSize: MainAxisSize.min, // Минимизируйте ширину столбца
                       children: [
                         SizedBox(height: 10), // Добавьте немного пространства между иконкой и текстом
-                        Text('Jigsaw Puzzle', style: TextStyle(fontSize: 22.0, color: Colors.black, fontFamily: "Inknut Antiqua"),), // Текст
+                        Text('Jigsaw Puzzle', style: TextStyle(fontSize: 22.0, color: Colors.black, fontFamily: 'Times New Roman'),), // Текст
                       ],
                     ),
                   ),
@@ -158,7 +158,7 @@ SizedBox(height: 16.0),
                       mainAxisSize: MainAxisSize.min, // Минимизируйте ширину столбца
                       children: [
                         SizedBox(height: 10), // Добавьте немного пространства между иконкой и текстом
-                        Text('     Labirint      ', style: TextStyle(fontSize: 22.0, color: Colors.black, fontFamily: "Inknut Antiqua"),), // Текст
+                        Text('     Labirint      ', style: TextStyle(fontSize: 22.0, color: Colors.black, fontFamily: 'Times New Roman'),), // Текст
                       ],
                     ),
                   ),
@@ -184,7 +184,7 @@ SizedBox(height: 16.0),
                       mainAxisSize: MainAxisSize.min, // Минимизируйте ширину столбца
                       children: [
                         SizedBox(height: 10), // Добавьте немного пространства между иконкой и текстом
-                        Text('   Crossword    ', style: TextStyle(fontSize: 22.0, color: Colors.black, fontFamily: "Inknut Antiqua"),), // Текст
+                        Text('   Crossword    ', style: TextStyle(fontSize: 22.0, color: Colors.black, fontFamily: 'Times New Roman'),), // Текст
                       ],
                     ),
                   ),
@@ -210,7 +210,7 @@ SizedBox(height: 16.0),
                       mainAxisSize: MainAxisSize.min, // Минимизируйте ширину столбца
                       children: [
                         SizedBox(height: 10), // Добавьте немного пространства между иконкой и текстом
-                        Text(' Minesweeper', style: TextStyle(fontSize: 22.0, color: Colors.black, fontFamily: "Inknut Antiqua"),), // Текст
+                        Text(' Minesweeper', style: TextStyle(fontSize: 22.0, color: Colors.black, fontFamily: 'Times New Roman'),), // Текст
                       ],
                     ),
                   ),
@@ -236,7 +236,7 @@ SizedBox(height: 16.0),
                       mainAxisSize: MainAxisSize.min, // Минимизируйте ширину столбца
                       children: [
                         SizedBox(height: 10), // Добавьте немного пространства между иконкой и текстом
-                        Text(' Match Game  ', style: TextStyle(fontSize: 22.0, color: Colors.black, fontFamily: "Inknut Antiqua"),), // Текст
+                        Text(' Match Game  ', style: TextStyle(fontSize: 22.0, color: Colors.black, fontFamily: 'Times New Roman'),), // Текст
                       ],
                     ),
                   ),

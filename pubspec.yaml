@@ -11,20 +11,25 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   english_words: ^4.0.0
   provider: ^6.0.0
   google_nav_bar: ^5.0.6
+  sqflite: ^2.3.3+1
+  path: ^1.9.0
+  flutter_svg: ^2.0.10+1
+  google_fonts: ^6.2.1
+  shared_preferences: ^2.0.0
+  google_maps_flutter: ^2.6.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: ^2.0.0
 
 flutter:
   uses-material-design: true
   assets:
+    - assets/
     - assets/set.png
     - assets/profile.png
     - assets/main.png
@@ -35,3 +40,4 @@ flutter:
     - assets/sandyq.png
     - assets/coin.png
     - assets/tiyn.png
+
