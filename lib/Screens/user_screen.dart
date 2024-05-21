@@ -43,7 +43,8 @@ class _UserScreenState extends State<UserScreen> {
     });
 
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Username updated successfully')),
+      SnackBar(content: Text('Username updated successfully')),// uaqytsha ozgertu tek page-ta gana ozgeret
+    
     );
   }
 
