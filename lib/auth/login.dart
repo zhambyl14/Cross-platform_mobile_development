@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'signup.dart';
-import 'users.dart';
-import 'sqlite.dart';
-import 'Main.dart'; // Импортируем MyHomePage для перехода после входа
+import '../models/users.dart';
+import '../SQLite/sqlite.dart';
+import '../main.dart'; // Импортируем MyHomePage для перехода после входа
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

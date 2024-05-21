@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
-import 'users.dart';
-import 'sqlite.dart';
+import '../models/users.dart';
+import '../SQLite/sqlite.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});

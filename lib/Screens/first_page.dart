@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:namer_app/login.dart';
-import 'signup.dart';
-import 'main.dart';
+import 'package:namer_app/auth/login.dart';
+import '../auth/signup.dart';
+import '../main.dart';
 
 class FirstPage extends StatelessWidget {
   @override
