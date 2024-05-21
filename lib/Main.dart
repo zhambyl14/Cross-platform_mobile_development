@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:namer_app/first_page.dart';
+import '/Screens/first_page.dart';
 import 'package:provider/provider.dart';
-import 'home_screen.dart';
-import 'user_screen.dart';
-import 'top_screen.dart';
-import 'settings_screen.dart';
+import 'Screens/home_screen.dart';
+import 'Screens/user_screen.dart';
+import 'Screens/top_screen.dart';
+import 'Screens/settings_screen.dart';
 
 void main() {
   runApp(MyApp());

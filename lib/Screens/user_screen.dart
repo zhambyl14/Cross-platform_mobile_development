@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'sqlite.dart'; // Import your DatabaseHelper
-import 'users.dart'; // Import your Users model
+import '../SQLite/sqlite.dart'; // Import your DatabaseHelper
+import '../models/users.dart'; // Import your Users model
 
 class UserScreen extends StatefulWidget {
   final String username;
