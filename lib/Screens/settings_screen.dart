@@ -13,7 +13,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false, // Убираем кнопку "назад"
+        automaticallyImplyLeading: false, 
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -132,7 +132,7 @@ class MapScreen extends StatelessWidget {
             return Center(child: Text('Ошибка при проверке интернет-соединения'));
           } else if (!snapshot.data!) {
             // Если нет соединения с интернетом
-            return Center(child: Text('Нет подключения к интернету'));
+            return Center(child: Text('No Internet Connection '));
           } else {
             // Если есть интернет, отображаем карту
             return GoogleMap(
@@ -142,7 +142,7 @@ class MapScreen extends StatelessWidget {
               ),
               markers: {
                 Marker(
-                  markerId: MarkerId('mabyMarker'),
+                  markerId: MarkerId('MarkerYMBA'),
                   position: LatLng(51.090682, 71.418236),
                   infoWindow: InfoWindow(
                     title: 'Company YMBA (Puzzle Escape)',
