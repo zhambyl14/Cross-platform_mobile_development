@@ -1,6 +1,7 @@
 // BUl page top-tiki
 
 import 'package:flutter/material.dart';
+import 'Board.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -115,9 +116,12 @@ class _HomeScreenState extends State<HomeScreen> {
               // Add buttons or actions for user-specific features
               Center(
                 child: ElevatedButton(
-                  onPressed: () {
-                    // Выполните действие, специфичное для пользователя
-                  },
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Board()),
+                  );
+                },
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.zero, // Удалите стандартный отступ
                     shape: RoundedRectangleBorder(
