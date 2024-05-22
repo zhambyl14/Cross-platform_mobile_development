@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:connectivity/connectivity.dart';
 
 
 class SettingsScreen extends StatefulWidget {
@@ -105,6 +106,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
   }
 }
 
+Future<bool> _checkInternetConnection() async {
+  var connectivityResult = await (Connectivity().checkConnectivity());
+  if (connectivityResult == ConnectivityResult.none) {
+    return false; // нет соединения с интернетом
+  }
+  return true; // есть соединение с интернетом
+}
 
 class MapScreen extends StatelessWidget {
   @override
@@ -113,20 +121,37 @@ class MapScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Map'),
       ),
-      body: GoogleMap(
-        initialCameraPosition: CameraPosition(
-          target: LatLng(51.090682, 71.418236), // Astana IT University, Астана, Казахстан
-          zoom: 15,
-        ),
-        markers: {
-          Marker(
-            markerId: MarkerId('mabyMarker'),
-            position: LatLng(51.090682, 71.418236), // Astana IT University, Астана, Казахстан
-            infoWindow: InfoWindow(
-              title: 'Company YMBA (Puzzle Escape)',
-              snippet: 'пр-т. Мангилик Ел., Астана 020000',
-            ),
-          ),
+      body: FutureBuilder<bool>(
+        future: _checkInternetConnection(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            // Ожидание результата проверки соединения
+            return Center(child: CircularProgressIndicator());
+          } else if (snapshot.hasError) {
+            // В случае ошибки при проверке соединения
+            return Center(child: Text('Ошибка при проверке интернет-соединения'));
+          } else if (!snapshot.data!) {
+            // Если нет соединения с интернетом
+            return Center(child: Text('Нет подключения к интернету'));
+          } else {
+            // Если есть интернет, отображаем карту
+            return GoogleMap(
+              initialCameraPosition: CameraPosition(
+                target: LatLng(51.090682, 71.418236),
+                zoom: 15,
+              ),
+              markers: {
+                Marker(
+                  markerId: MarkerId('mabyMarker'),
+                  position: LatLng(51.090682, 71.418236),
+                  infoWindow: InfoWindow(
+                    title: 'Company YMBA (Puzzle Escape)',
+                    snippet: 'пр-т. Мангилик Ел., Астана 020000',
+                  ),
+                ),
+              },
+            );
+          }
         },
       ),
     );
